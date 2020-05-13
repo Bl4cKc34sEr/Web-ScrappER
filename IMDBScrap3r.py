@@ -34,21 +34,21 @@ def selectChoice():
 	for i,option in enumerate(options_map,1):
 		print("{}) {}".format(i,options_map[option][0]))
 
-	choice = int(input('\nChoice please..\n'))
+	choice = int(input('\nChoice please......\n'))
 	while(choice<1 or choice>len(options_map)):
-		print('Wrong choice, enter again..')
-		choice = int(input('\nChoice please..\n'))
+		print('Wrong choice, enter again... ..')
+		choice = int(input('\nChoice please.....\n'))
 	return options_map[choice][1]
 
 def getData(base_url, option):
 	complete_url = base_url + option
 	soup = getResponse(complete_url)
-	card_list = soup.find_all('span',{'class':'media-body media-vertical-align'}) #material card list
+	card_list = soup.find_all('span',{'class':'media-body media-vertical-align'})
 	result = []
 	count = 1
 	for card in card_list:
 		try:
-			name = card.find('h4').text.replace("\n"," ").lstrip("0123456789.- ")  #removes order indexes for movies 1,2,3,4,...
+			name = card.find('h4').text.replace("\n"," ").lstrip("0123456789.- ")  
 		except: 
 			pass
 		try:
@@ -62,7 +62,7 @@ def getData(base_url, option):
 def main():
 	base_url = "http://m.imdb.com/chart/"
 	choice = selectChoice()
-	#print(choice)
+	print(choice)
 	getData(base_url, choice)
 	
 if __name__ == '__main__':
