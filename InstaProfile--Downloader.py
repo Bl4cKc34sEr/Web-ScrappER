@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# By--Bl4cKc34sEr
+# In[ ]:
 
+# By--Bl4cKc34sEr
 
 from tkinter import *
 from bs4 import BeautifulSoup
@@ -34,7 +35,7 @@ def i_Downloader():
     download_path = "Desktop"
     insta_username = insta_id.get()
     insta_url = "https://www.instagram.com/"+insta_username
-    insta_response =  requests.get(insta_url)
+    insta_response =  requests.get(insta_url)# By--Bl4cKc34sEr
     soup = BeautifulSoup(insta_response.text, 'html.parser')
     script = soup.find('script', text=re.compile('window._sharedData'))
     page_json = script.text.split(' = ', 1)[1].rstrip(';')
@@ -46,7 +47,7 @@ def i_Downloader():
     dp_image = dp_image.resize((500, 500), Image.ANTIALIAS)
     image = ImageTk.PhotoImage(dp_image)
     root.dpLabel.config(image=image)
-    root.dpLabel.photo = image
+    root.dpLabel.photo = image# By--Bl4cKc34sEr
     dwldtxt.set('Profile Picture Successfully Downloaded')
 
 root = tk.Tk()
@@ -58,13 +59,6 @@ root.config(background = "tan4")
 insta_id = StringVar()
 dwldtxt = StringVar()
 
-CreateWidgets()
+CreateWidgets()# By--Bl4cKc34sEr
 
 root.mainloop()
-
-
-# In[ ]:
-
-
-
-
