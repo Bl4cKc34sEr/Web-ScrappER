@@ -67,26 +67,3 @@ def main():
 	
 if __name__ == '__main__':
 	main()
-
-
-'''
-#table formats
-- "plain"
-- "simple"
-- "grid"
-- "fancy_grid"
-- "pipe"
-- "orgtbl"
-- "jira"
-- "presto"
-- "psql"
-- "rst"
-- "mediawiki"
-- "moinmoin"
-- "youtrack"
-- "html"
-- "latex"
-- "latex_raw"
-- "latex_booktabs"
-- "textile"
-'''
