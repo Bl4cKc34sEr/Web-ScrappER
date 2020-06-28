@@ -36,7 +36,7 @@ def selectChoice():
 
 	choice = int(input('\nChoice please......\n'))
 	while(choice<1 or choice>len(options_map)):
-		print('Wrong choice, enter again... ..')
+		#print('Wrong choice, enter again... ..')
 		choice = int(input('\nChoice please.....\n'))
 	return options_map[choice][1]
 
