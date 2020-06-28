@@ -66,4 +66,4 @@ def main():
 	getData(base_url, choice)
 	
 if __name__ == '__main__':
-main()
+	main()
