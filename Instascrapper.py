@@ -1,11 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# By--Bl4cKc34sEr
-
-
 import requests
-from bs4 import BeautifulSoup # Importin Beautiful soup the web scrapping library....
+from bs4 import BeautifulSoup # Importing Beautiful soup the web scrapping library....
 
 def scrapeInstagram(soup1):
    
@@ -38,7 +35,7 @@ if __name__ == '__main__':                   # This is the main Driver Code.....
     insta_URL = "https://www.instagram.com/" + insta_User
 
     
-    insta_Page = requests.get(insta_URL)      # Storing the complete URL with user-input Instagram Username....
+    insta_Page = requests.get(insta_URL)  
 
     
     soup = BeautifulSoup(insta_Page.text, "html.parser")
