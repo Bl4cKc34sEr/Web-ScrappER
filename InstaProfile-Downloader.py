@@ -3,8 +3,6 @@
 
 # In[ ]:
 
-# By--Bl4cKc34sEr
-
 from tkinter import *
 from bs4 import BeautifulSoup
 from PIL import Image, ImageTk
@@ -43,7 +41,7 @@ def i_Downloader():
     dp_url = data['entry_data']['ProfilePage'][0]['graphql']['user']['profile_pic_url_hd']
     dp_name = download_path+insta_username+'.jpg'
     urllib.request.urlretrieve(dp_url, dp_name)
-    dp_image = Image.open(dp_name)
+    dp_image = Image.open(dp_name)# By--Bl4cKc34sEr
     dp_image = dp_image.resize((500, 500), Image.ANTIALIAS)
     image = ImageTk.PhotoImage(dp_image)
     root.dpLabel.config(image=image)
@@ -59,6 +57,6 @@ root.config(background = "tan4")
 insta_id = StringVar()
 dwldtxt = StringVar()
 
-CreateWidgets()# By--Bl4cKc34sEr
+CreateWidgets()
 
 root.mainloop()
