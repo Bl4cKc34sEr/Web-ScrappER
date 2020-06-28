@@ -9,8 +9,8 @@ def scrapeInstagram(soup1):
     insta_Data = []                   # Creating empty list called insta_Data for saving the scrapped results....
 
    
-    for meta in soup1.find_all(name="meta", attrs={"property": "og:description"}):     # Fetching and splitting the value stored in content attribute of meta tag
-                                                                                       # and saving them in insta_Data List.....
+    for meta in soup1.find_all(name="meta", attrs={"property": "og:description"}):     
+                                                                                      
         
         insta_Data = meta['content'].split()
 
